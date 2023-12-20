@@ -59,3 +59,13 @@ color: rgb(16, 38, 59);
 li {
 color: rgb(16, 38, 59);
 }
+
+#postamble {
+  margin-top: 25px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-top: 1px solid #DDD;
+  text-align: right;
+  font-size: 0.75em;
+  color: grey;
+}
