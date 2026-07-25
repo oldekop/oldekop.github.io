@@ -1,65 +1,480 @@
+
+:root {
+  --primary: #10263b;
+  --accent: #2a5270;
+  --text: #2d3748;
+  --bg-light: #f8fafc;
+  --border: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  width: 1000px;
-  margin: 0px auto;
-  margin-top: 80px;
-  margin-bottom: 900px;
-  font-family:Arial, sans-serif;
-  font-size:11pt;
-  color:rgb(16, 38, 59);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background-color: #ffffff;
+  line-height: 1.7;
+  font-size: 11pt;
+  -webkit-font-smoothing: antialiased;
 }
 
-img {
-  width: 70%;
+/* --- Grid-Layout & Structure --- */
+.site-wrapper {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 60px 24px 20px 24px; 
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* Left column: Profile and Contact */
+.sidebar {
+  position: sticky;
+  top: 40px;
   height: auto;
-  border: 1px solid rgb(16, 38, 59);
- }
-
- #left {
-  float: left; 
-  width: 26.2%;
 }
 
-#right {
-  float: right; 
-  width: 71%;
+.profile-frame {
+  width: 100%;
+  max-width: 220px;
+  margin-bottom: 24px;
 }
 
-#bar-top {
-  height: 3px;
-  width: 710px;
-  top:0px;
+.profile-pic {
+  width: 90%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--primary);
+  display: block;
+}
+
+.name-heading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.2;
   margin-bottom: 30px;
-  position:static;
-  left:0px;
-  background-color:rgb(16, 38, 59);
 }
 
-#bar {
-  height: 3px;
-  width: 710px;
-  top:0px;
-  margin-top:30px;
-  margin-bottom: 30px;
-  position:static;
-  left:0px;
-  background-color:rgb(16, 38, 59);
+.contact-block {
+  margin-bottom: 24px;
+}
+
+.label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #718096;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.email {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+address {
+  font-style: normal;
+  color: #4a5568;
+  font-size: 10.5pt;
+}
+
+.office-hours-box {
+  background-color: var(--bg-light);
+  padding: 14px;
+  border-radius: 6px;
+  border-left: 3px solid var(--accent);
+  font-size: 10.5pt;
+}
+
+.lecture-free {
+  color: #718096; 
+  font-size: 9pt; 
+  display: block; 
+  margin-top: 4px;
+}
+
+/* --- Right column: Main content --- */
+.content-main section {
+  margin-bottom: 45px;
+}
+
+h2 {
+  font-size: 1.35rem;
+  color: var(--primary);
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+}
+
+h2::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+  margin-left: 20px;
+}
+
+p {
+  margin-bottom: 16px;
+  color: var(--text);
+  text-align: justify;
 }
 
 a {
-  color: rgb(16, 38, 59);
+  color: var(--accent);
   text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
 }
 
-ul {
-  list-style-type: square;
+a:hover {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
 }
 
-#postamble {
-  margin-top: 25px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  border-top: 1px solid #DDD;
+/* --- Navigation --- */
+.top-nav {
+  position: sticky;
+  top: 0;
+  background-color: #ffffff; 
+  z-index: 100;             
+  
+  padding-top: 60px;        
+  margin-top: -60px;        
+  
+  padding-bottom: 15px;      
+  margin-bottom: 35px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  gap: 20px;
+}
+
+.top-nav a {
+  color: #718096;
+  font-size: 10pt;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: none;
+  transition: color 0.2s ease;
+}
+
+.top-nav a:hover {
+  color: var(--primary);
+}
+
+.top-nav a:not(:last-child)::after {
+  content: "•";
+  color: var(--border);
+  margin-left: 20px;
+  display: inline-block;
+  pointer-events: none;
+}
+
+section {
+  scroll-margin-top: 130px;
+}
+
+/* --- Publications List --- */
+.pub-headline {
+  margin-top: 25px; 
+  margin-bottom: 12px;
+}
+
+.pub-list {
+  list-style: none;
+}
+
+.pub-item {
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px dashed #edf2f7;
+}
+
+.pub-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.pub-title {
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 11.5pt;
+}
+
+.pub-authors {
+  font-size: 10pt;
+  color: #4a5568;
+  margin-top: 2px;
+}
+
+.pub-journal {
+  font-size: 10pt;
+  color: #718096;
+  font-style: italic;
+}
+
+/* --- Theses List --- */
+.thesis-timeline {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px 30px;
+  background-color: var(--bg-light); 
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.thesis-year {
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 11pt;
+}
+
+.thesis-details {
+  border-bottom: 1px dashed #e2e8f0;
+  padding-bottom: 16px;
+}
+
+.thesis-details:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.thesis-timeline-title {
+  font-weight: 600;
+  color: var(--text);
+  font-size: 11pt;
+  margin-bottom: 2px;
+}
+
+.thesis-meta {
+  font-size: 10pt;
+  color: #4a5568;
+}
+
+.thesis-supervisor {
+  font-size: 9.5pt;
+  color: #718096;
+  font-style: italic;
+  margin-top: 2px;
+}
+
+/* --- Teaching --- */
+.teaching-uni-label {
+  font-size: 0.85rem; 
+  color: var(--primary);
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 4px;
+}
+
+.uni-role {
+  font-weight: 400;
+  color: var(--accent);
+  text-transform: none;
+  letter-spacing: 0.5px;
+  margin-left: 8px;
+}
+
+.teaching-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px 20px;
+  background-color: var(--bg-light);
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.course-name {
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 2px;
+}
+
+.course-semester {
+  color: #718096;
+  font-size: 10pt;
   text-align: right;
-  font-size: 0.75em;
-  color: grey;
+}
+
+.teaching-subheadline {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #718096;
+  font-weight: 600;
+  margin-top: 25px;
+  margin-bottom: 12px;
+}
+
+/* --- Fußzeile --- */
+footer {
+  max-width: 1002px;
+  margin: 0 auto 60px auto;
+  padding: 20px 24px 0 24px;
+  border-top: 1px solid var(--border);
+  font-size: 0.8rem;
+  color: #a0aec0;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* --- Dark Mode Navigation --- */
+.theme-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #718096;
+  font-family: inherit;
+  font-size: 10pt;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.theme-btn:hover {
+  color: var(--primary);
+}
+
+.top-nav .theme-btn::before {
+  content: "•";
+  color: var(--border);
+  margin-right: 20px;
+  display: inline-block;
+  pointer-events: none;
+}
+
+/* --- Manueller Dark Mode --- */
+body.dark-theme {
+  --primary: #ffffff;       
+  --accent: #93c5fd;
+  --text: #e2e8f0;          
+  --bg-light: #222d3d;
+  --border: #334155;
+  background-color: #1a202c;
+}
+body.dark-theme .top-nav { background-color: #1a202c; }
+body.dark-theme address { color: #cbd5e1; }
+body.dark-theme .pub-authors { color: #cbd5e1; }
+body.dark-theme .pub-journal { color: #94a3b8; }
+body.dark-theme .thesis-meta { color: #cbd5e1; }
+body.dark-theme .thesis-supervisor { color: #a1a1aa; }
+body.dark-theme .label { color: #94a3b8; }
+body.dark-theme .course-semester { color: #cbd5e1; }
+body.dark-theme .lecture-free { color: #cbd5e1; }
+
+/* --- Automatischer Dark Mode --- */
+@media (prefers-color-scheme: dark) {
+  body:not(.light-theme) {
+    --primary: #ffffff;       
+    --accent: #93c5fd;        
+    --text: #e2e8f0;          
+    --bg-light: #222d3d;      
+    --border: #334155;        
+    background-color: #1a202c; 
+  }
+  body:not(.light-theme) .top-nav { background-color: #1a202c; }
+  body:not(.light-theme) address { color: #cbd5e1; }
+  body:not(.light-theme) .pub-authors { color: #cbd5e1; }
+  body:not(.light-theme) .pub-journal { color: #94a3b8; }
+  body:not(.light-theme) .thesis-meta { color: #cbd5e1; }
+  body:not(.light-theme) .thesis-supervisor { color: #a1a1aa; }
+  body:not(.light-theme) .label { color: #94a3b8; }
+  body:not(.light-theme) .course-semester { color: #cbd5e1; }
+  body:not(.light-theme) .lecture-free { color: #cbd5e1; }
+}
+
+/* --- Smartphones and Tablets --- */
+@media (max-width: 850px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: visible;
+  }
+
+  .site-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 40px 20px;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important; 
+  }
+
+  .site-wrapper > * {
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
+  }
+  
+  .sidebar {
+    position: relative;
+    top: 0;
+  }
+
+  .profile-frame {
+    max-width: 160px;
+  }
+
+  h2::after {
+    margin-left: 15px;
+  }
+
+  .teaching-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .course-semester {
+    text-align: left;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #edf2f7;
+    padding-bottom: 4px;
+  }
+
+  p {
+    text-align: left;
+    word-break: break-word;
+  }
+
+  .top-nav {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10px;
+  }
+
+  .top-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+  }
+
+  .top-nav a {
+    display: inline-block;
+    white-space: nowrap;
+  }
 }

@@ -1,71 +1,226 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
-    <title>Janike Oldekop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janike Oldekop — TU Berlin</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <!-- Page Content -->
-    <div id="left">
-      <img style="float: left; margin-right: 12px; margin-bottom: 15px;" src="6760.jpg" alt="picture">
-      <b style="font-size:18pt; margin-bottom: 100px;">Janike Oldekop</b>
-      <br></br>
-      <p>Best way to reach me:</p>
-      <b><span style="unicode-bidi:bidi-override; direction: rtl;">ed.nilreb-ut.htam(ta)pokedlo</span></b>
-      <br></br>
-      <p>Address:<address>
-        Technische Universit&auml;t Berlin<br>
-        Institut f&uuml;r Mathematik (MA 3-2)<br>
-        Stra&szlig;e des 17. Juni 136<br>
-        10623 Berlin<br>
-        Germany
-        </address></p> 
-        <br></br>
-        <p style="margin-top: -15px;">Office hours:<!--by appointment.--></p>
-        <p>Tuesday, 09:00 - 10:00 in MA 764</p>
-        <p>During lecture-free periods by appointment.</p>
+    <div class="site-wrapper">
+
+      <!-- Left column: Profile and Contact -->
+       <aside class="sidebar">
+          <div class="profile-frame">
+            <img class="profile-pic" src="6760.jpg" alt="Janike Oldekop">
+          </div>
+
+          <h1 class="name-heading">Janike Oldekop</h1>
+
+          <div class="contact-block">
+            <div class="label">Contact</div>
+            <span class="email">ed.nilreb-ut.htam(ta)pokedlo</span>
+          </div>
+
+          <div class="contact-block">
+            <div class="label">Address</div>
+            <address>
+              Technische Universität Berlin<br>
+              Institut für Mathematik (MA 3-2)<br>
+              Straße des 17. Juni 136<br>
+              10623 Berlin, Germany
+            </address>
+          </div>
+
+          <div class="contact-block">
+            <div class="label">Office Hours</div>
+            <div class="office-hours-box">
+              <strong>Tuesday, 09:00 - 10:00</strong><br>
+              Room: MA 764<br>
+              <span class="lecture-free">Lecture-free periods by appointment.</span>
+            </div>
+          </div>
+       </aside>
+
+       <!-- Right column: Main content -->
+        <main class="content-main">
+
+          <!-- Navigation -->
+          <nav class="top-nav">
+            <a href="#about">About me</a>
+            <a href="#research">Research</a>
+            <a href="#presentations">Presentations</a>
+            <a href="#teaching">Teaching</a>
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark mode">Dark</button>
+          </nav>
+
+          <section id="about">
+            <h2>About me</h2>
+            <p>I am a research and teaching assistant at <a href="https://tu.berlin" target="_blank" rel="noopener">TU Berlin</a>. As a Phase II student, I am part of the <a href="https://math-berlin.de" target="_blank" rel="noopener">Berlin Mathematical School</a> and the research group of "Algebraic and Geometric Methods in Data Analysis" led by <a href="http://www.luke-amendola.appspot.com" target="_blank" rel="noopener">Carlos Am&eacute;ndola</a>. Alongside my research and teaching, I also serve as a student counselor for the Institute of Mathematics.</p>
+            <p>I received my M.Sc. in Mathematics at <a href="https://ovgu.de" target="_blank" rel="noopener">OvGU Magdeburg</a> under the supervision of <a href="https://thomas-kahle.de" target="_blank" rel="noopener">Thomas Kahle</a> and <a href="https://www.htw-berlin.de/hochschule/personen/person/?eid=10256" target="_blank" rel="noopener">Carsten Conradi</a>.</p>
+          </section>
+
+          <section id="research">
+            <h2>Research</h2>
+            <p>My main research interest is algebraic statistics, in particular the likelihood geometry of discrete statistical models. More broadly, I am also interested in developments regarding discrete and applied algebraic geometry.</p>
+
+            <div class="label pub-headline">Peer-reviewed Articles & Preprints</div>
+            <ul class="pub-list">
+              <li class="pub-item">
+                <a href="https://arxiv.org/abs/2606.16482" class="pub-title">Euler Stratifications of Second Hypersimplices via Delta-matroids</a>
+                <div class="pub-authors">Single-author paper (2026).</div>
+              </li>
+              <li class="pub-item">
+                <a href="https://arxiv.org/abs/2601.21818" class="pub-title">Identifiability in Graphical Discrete Lyapunov Models</a>
+                <div class="pub-authors">with C. O. Recke, S. Lumpp, N. Kushnerchuk, J. Li, J. I. Coons, and E. Robeva (2026).</div>
+              </li>
+              <li class="pub-item">
+                <a href="https://arxiv.org/abs/2507.02719" class="pub-title">The Maximum Likelihood Degree of Toric Models is Monotonic</a>
+                <div class="pub-authors">with C. Am&eacute;ndola, and M. Wiesmann (2025).</div>
+              </li>
+              <li class="pub-item">
+                <a href="https://arxiv.org/abs/2507.18686" class="pub-title">One-dimensional Discrete Models of Maximum Likelihood Degree One</a>
+                <div class="pub-authors">with C. Am&eacute;ndola, and V. D. Nguyen.</div>
+                <div class="pub-journal"><a href="https://www.sciencedirect.com/science/article/pii/S0196885826000679" target="_blank">Advances in Applied Mathematics</a> 178 (2026) 103095.</div>
+              </li>
+              <li class="pub-item">
+                <a href="https://arxiv.org/abs/2312.10010" class="pub-title">Matroid Stratification of ML Degrees of Independence Models</a>
+                <div class="pub-authors">with O. Clarke, S. Hoşten, and N. Kushnerchuk.</div>
+                <div class="pub-journal"><a href="https://msp.org/astat/2024/15-2/p03.xhtml" target="_blank">Algebraic Statistics</a> 15(2) (2024) 199-223.</div>
+              </li>
+              <li class="pub-item">
+                <a href="https://arxiv.org/abs/2311.13572" class="pub-title">Likelihood Geometry of Reflexive Polytopes</a>
+                <div class="pub-authors">with C. Am&eacute;ndola.</div>
+                <div class="pub-journal"><a href="https://msp.org/astat/2024/15-1/p06.xhtml" target="_blank">Algebraic Statistics</a> 15(1) (2024) 113-143.</div>
+              </li>
+            </ul>
+
+            <div class="label pub-headline" style="margin-top: 45px;">Theses</div>
+            <div class="thesis-timeline">
+              <div class="thesis-year">M.Sc.</div>
+              <div class="thesis-details">
+                <div class="thesis-timeline-title">Multistationäre Regionen chemischer Reaktionsnetzwerke</div>
+                <div class="thesis-meta">OvGU Magdeburg (2022) — <span class="thesis-supervisor">Supervised by T. Kahle and C. Conradi</span></div>
+              </div>
+
+              <div class="thesis-year">B.Sc.</div>
+              <div class="thesis-details">
+                <div class="thesis-timeline-title">Markov-Modelle für die Ansammlung von Mutationen</div>
+                <div class="thesis-meta">OvGU Magdeburg (2019) — <span class="thesis-supervisor">Supervised by T. Kahle</span></div>
+              </div>
+            </div>
+          </section>
+
+          <section id="presentations">
+            <h2>Selected Presentations</h2>
+            <ul class="pub-list">
+              <li class="pub-item">
+                <div class="pub-title">Algebraic Statistics of Discrete Statistical Models</div>
+                <div class="pub-journal">BMS–BGSMath Junior Meeting 2026, Barcelona Graduate School of Mathematics — September 2026</div>
+              </li>
+              <li class="pub-item">
+                <div class="pub-title">Euler Stratifications of Second Hypersimplices via Delta-matroids</div>
+                <div class="pub-journal">EWM 2026 General Meeting, University of Warwick — September 2026</div>
+                <div class="pub-journal">Special Seminar, MPI MiS Leipzig — July 2026</div>
+              </li>
+              <li class="pub-item">
+                <div class="pub-title">Likelihood Geometry of Toric Models</div>
+                <div class="pub-journal">Applied Algebra and Geometry Seminar, University of Copenhagen — January 2026</div>
+              </li>
+              <li class="pub-item">
+                <div class="pub-title">One-dimensional Models of ML Degree One: Algebraic Statistics Meets CR Geometry</div>
+                <div class="pub-journal">Seminar on Nonlinear Algebra, MPI MiS Leipzig — September 2025</div>
+              </li>
+              <li class="pub-item">
+                <div class="pub-title">ML Degree Monotonicity of Toric Models</div>
+                <div class="pub-journal">Conference on Applied Algebraic Geometry (AG25), University of Wisconsin-Madison — July 2025</div>
+                <div class="pub-journal">Algebraic Statistics 2025, TU Munich — March 2025</div>
+              </li>
+              <li class="pub-item">
+                <div class="pub-title">Stratification of Toric MLE</div>
+                <div class="pub-journal">Apprenticeship Week: Varieties from Statistics, IMSI Chicago — October 2023</div>
+              </li>
+              <li class="pub-item">
+                <div class="pub-title">Likelihood Geometry of Reflexive Polytopes</div>
+                <div class="pub-journal">Workshop for Women in Algebraic Statistics, St John’s College, University of Oxford — July 2024</div>
+                <div class="pub-journal">Research Seminar on Discrete Geometry and Topological Combinatorics, FU Berlin — April 2024</div>
+                <div class="pub-journal">Graduate Student Meeting on Applied Algebra and Combinatorics, KTH Stockholm — April 2023</div>
+              </li>
+            </ul>
+          </section>
+
+          <section id="teaching">
+            <h2>Teaching</h2>
+            <!--<div class="label teaching-uni-label" style="margin-top: 45px;">TU Berlin <span class="uni-role">— as Teaching Assistant</span></div>-->
+            <div class="label teaching-uni-label">TU Berlin <span class="uni-role">— as Teaching Assistant</span></div>
+            <div class="teaching-grid">
+              <div class="course-name">Discrete Geometry I</div>
+              <div class="course-semester">Summer Semester 2026</div>
+
+              <div class="course-name">Calculus I for Mathematicians</div>
+              <div class="course-semester">Winter Semester 2025/26</div>
+
+              <div class="course-name">Stochastics for Computer Scientists</div>
+              <div class="course-semester">Summer Semester 2025</div>
+
+              <div class="course-name">Discrete Geometry II</div>
+              <div class="course-semester">Winter Semester 2024/25</div>
+    
+              <div class="course-name">Discrete Geometry I</div>
+              <div class="course-semester">Summer Semester 2024</div>
+
+              <div class="course-name">Linear Algebra I for Mathematicians</div>
+              <div class="course-semester">Winter Semester 2023/24</div>
+
+              <div class="course-name">Stochastics for Computer Scientists</div>
+              <div class="course-semester">Summer Semester 2023</div>
+
+              <div class="course-name">Discrete Geometry II</div>
+              <div class="course-semester">Winter Semester 2022/23</div>
+            </div>
+
+            <div class="teaching-subheadline">Summer & Winter Schools</div>
+            <div class="teaching-grid">
+              <div>
+                <div class="course-name">SLMath Summer Graduate School: New Perspectives on Discriminants and Their Applications</div>
+                <div class="pub-journal" style="margin-top: 2px;">MPI MiS Leipzig</div>
+              </div>
+              <div class="course-semester">June - July 2025</div>
+
+              <div>
+                <div class="course-name">Winter School: Moments, Non-Negative Polynomials, and Algebraic Statistics</div>
+                <div class="pub-journal" style="margin-top: 2px;">University of Konstanz</div>
+              </div>
+              <div class="course-semester">February 2025</div>
+            </div>
+          </section>
+
+        </main>
+
     </div>
-    <div id="right">
-      <!--<center><b style="font-size:18pt; margin-bottom: 100px;">Janike Oldekop</b></center>-->
-      <div id="bar-top"></div> 
-      <b>About me</b>
-      <p>I am a research and teaching assistant at <a href="https://www.tu.berlin">TU Berlin</a>. As a Phase II student, I am part of the <a href="https://www.math-berlin.de">Berlin Mathematical School</a> and the research group of "Algebraic and Geometric Methods in Data Analysis" led by <a href="http://www.luke-amendola.appspot.com">Carlos Am&eacutendola</a>. I received my M.Sc. in Mathematics at <a href="https://www.ovgu.de">OvGU Magdeburg</a> under the supervision of <a href="https://thomas-kahle.de">Thomas Kahle</a> and <a href="https://www.htw-berlin.de/hochschule/personen/person/?eid=10256">Carsten Conradi</a>.</p>
-      <div id="bar"></div> 
-      <b>Research</b>
-      <p>My main research interest is algebraic statistics, in particular likelihood geometry of toric models. More broadly, I am also interested in developments regarding discrete and applied algebraic geometry.</p>
-      <p></p>
-      <!-- <p>Preprints:<p>
-        <ul>
-          <li>add</li>
-        </ul>
-      <p></p> -->
-      <p>Peer-reviewed articles and preprints:<p>
-        <ul>
-          <li><a href="https://arxiv.org/abs/2606.16482">Euler Stratifications of Second Hypersimplices via Delta-matroids</a><br> Single-author paper (2026).</li>
-          <li><a href="https://arxiv.org/abs/2601.21818">Identifiability in Graphical Discrete Lyapunov Models</a><br>with C. O. Recke, S. Lumpp, N. Kushnerchuk, J. Li, J. I. Coons, and E. Robeva (2026).</li>
-          <li style="padding-bottom: 6px"><a href="https://arxiv.org/abs/2507.02719">The Maximum Likelihood Degree of Toric Models is Monotonic</a><br>with C. Am&eacutendola, and M. Wiesmann (2025).</li>
-          <li><a href="https://arxiv.org/abs/2507.18686">One-dimensional Discrete Models of Maximum Likelihood Degree One</a><br>with C. Am&eacutendola, and V. D. Nguyen, <i><a href="https://www.sciencedirect.com/science/article/pii/S0196885826000679">Advances in Applied Mathematics</i> 178 (2026) 103095.</a></li>
-          <li><a href="https://arxiv.org/abs/2312.10010">Matroid Stratification of ML Degrees of Independence Models</a><br>with O. Clarke, S. Hoşten, and N. Kushnerchuk, <i><a href="https://msp.org/astat/2024/15-2/p03.xhtml">Algebraic Statistics</i> 15(2) (2024) 199-223.</a></li>
-          <li><a href="https://arxiv.org/abs/2311.13572">Likelihood Geometry of Reflexive Polytopes</a><br>with C. Am&eacutendola, <i><a href="https://msp.org/astat/2024/15-1/p06.xhtml">Algebraic Statistics</i> 15(1) (2024) 113-143.</a></li>
-        </ul>
-      <div id="bar"></div> 
-      <b>Teaching</b>
-        <ul>
-          <li>Summer 2026 &ndash; Discrete Geometry I</li>
-          <li>Winter 2025/26 &ndash; Calculus I for Mathematicians</li>
-          <li>Summer 2025 &ndash; Stochastics for Computer Scientists</li>
-          <li>Winter 2024/25 &ndash; Discrete Geometry II</li>
-          <li>Summer 2024 &ndash; Discrete Geometry I</li>
-          <li>Winter 2023/24 &ndash; Linear Algebra I for Mathematicians</li>
-          <li>Summer 2023 &ndash; Stochastics for Computer Scientists</li>
-          <li>Winter 2022/23 &ndash; Discrete Geometry II</li>
-       </ul>
-       <div id="bar"></div> 
-       <b>Student counseling</b>
-       <p>I am study counselor responsible for the study programs <i>Business Mathematics</i> and <i>Technomathematics</i> at TU Berlin. Detailed information about studying mathematics at TU Berlin can be found <a href="https://www.tu.berlin/math/studienberatung">here <span style="font-size:7pt;">&#x1F517;</span></a>. If you have further questions or need advice concerning the organization of your studies, please do not hesitate to write me an email or come to my office hours.</p>
-       <div id="postamble" class="status">
-        &copy; Janike Oldekop - 26 June 2026
-    </div>
+
+    <footer>
+      <span>&copy; 2026 Janike Oldekop</span>
+      <span>Last updated: July 2026</span>
+    </footer>
+
+    <script>
+      const btn = document.getElementById("theme-toggle");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+      function updateButtonText() {
+        const isDarkNow = document.body.classList.contains("dark-theme") || 
+                          (prefersDark.matches && !document.body.classList.contains("light-theme"));
+        btn.textContent = isDarkNow ? "Light" : "Dark";
+      }
+      updateButtonText();
+      btn.addEventListener("click", () => {
+        if (prefersDark.matches) {
+          document.body.classList.toggle("light-theme");
+        } else {
+          document.body.classList.toggle("dark-theme");
+        }
+        updateButtonText();
+      });
+    </script>
   </body>
 </html>
