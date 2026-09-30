@@ -320,6 +320,12 @@ section {
   margin-bottom: 12px;
 }
 
+.course-meta {
+  font-weight: normal;
+  font-size: 10pt;
+  color: #718096;
+}
+
 /* --- Fußzeile --- */
 footer {
   max-width: 1002px;
